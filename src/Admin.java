@@ -77,16 +77,16 @@ public class Admin implements User{
         for (Book book : books ) {
             if (book.getTitle().equals(title)){
                 books.remove(book);
-                System.out.println("删除成功");
+                System.out.println("删除成功！");
 
             }
 
         }
-        System.out.println("图书不存在")
+        System.out.println("图书不存在！")
     }
 
     boolean securityQuestion(){
-        String[] securityQuestions = {"你的姓名是？","你的年龄是？","你的性别是？"};
+        String[] securityQuestions = {"你的姓名是什么？","你的年龄是多大？","你的性别是什么？"};
         Random random = new Random();
         int index = random.nextInt(securityQuestions.size());
         List<String> questions = new ArrayList<String>(securityQuestions.keySet());
